@@ -4,7 +4,6 @@
 *.tfstate.*
 *.tfvars
 *.tfplan
-.terraform.lock.hcl
 
 # Secrets / environment files
 .env
