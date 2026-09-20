@@ -26,6 +26,10 @@ resource "aws_instance" "app_1" {
     delete_on_termination = true
   }
 
+  lifecycle {
+    ignore_changes = [ami]
+  }
+
   tags = {
     Name       = "app-server-1"
     Role       = "application"
@@ -55,6 +59,10 @@ resource "aws_instance" "app_2" {
     volume_size           = 10
     encrypted             = true
     delete_on_termination = true
+  }
+
+  lifecycle {
+    ignore_changes = [ami]
   }
 
   tags = {
@@ -88,6 +96,10 @@ resource "aws_instance" "db" {
     delete_on_termination = true
   }
 
+  lifecycle {
+    ignore_changes = [ami]
+  }
+
   tags = {
     Name       = "db-server"
     Role       = "database"
@@ -118,6 +130,10 @@ resource "aws_instance" "monitoring" {
     volume_size           = 15
     encrypted             = true
     delete_on_termination = true
+  }
+
+  lifecycle {
+    ignore_changes = [ami]
   }
 
   tags = {

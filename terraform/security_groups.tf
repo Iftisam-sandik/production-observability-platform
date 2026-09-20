@@ -87,6 +87,14 @@ resource "aws_security_group" "app" {
     security_groups = [aws_security_group.monitoring.id]
   }
 
+  ingress {
+    description     = "Backend metrics from monitoring server"
+    from_port       = 3000
+    to_port         = 3000
+    protocol        = "tcp"
+    security_groups = [aws_security_group.monitoring.id]
+  }
+
   egress {
     description = "Allow outbound traffic"
     from_port   = 0
