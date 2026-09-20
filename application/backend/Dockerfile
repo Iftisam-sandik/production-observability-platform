@@ -6,7 +6,7 @@ COPY package*.json ./
 
 RUN npm install --omit=dev
 
-COPY server.js .
+COPY server.js metrics.js ./
 
 EXPOSE 3000
 
