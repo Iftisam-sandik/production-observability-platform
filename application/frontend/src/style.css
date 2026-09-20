@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #1f2937;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  margin-bottom: 5px;
+}
+
+.header p {
+  margin-top: 0;
+  color: #6b7280;
+}
+
+.card {
+  background: white;
+  padding: 24px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+input,
+button {
+  padding: 10px;
+}
+
+button {
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.message {
+  margin-top: 15px;
+}

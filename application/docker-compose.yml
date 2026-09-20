@@ -1,0 +1,18 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: orderpulse-backend
+    restart: unless-stopped
+    env_file:
+      - .env
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: orderpulse-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
